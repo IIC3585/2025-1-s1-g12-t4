@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componente de Suscripción</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Planes de Suscripción con Web Components</h1>
+    <div class="container">
+      <subscription-card
+        title="Básico"
+        price="0"
+        period="mes"
+        visits="500"
+        features='["Visitas diarias", "Reportes mensuales", "Integración con Google Analytics"]'
+      >
+      </subscription-card>
+
+      <subscription-card
+        title="Freelance"
+        price="16"
+        period="mes"
+        visits="10,000"
+        featured
+        features='["Integración con Twitter", "Integración con Instagram", "Dashboard Avanzado", "Dashboard de Adquisiciones"]'
+      >
+      </subscription-card>
+
+      <subscription-card
+        title="Empresarial"
+        price="49"
+        period="mes"
+        visits="100,000"
+        features='["Dashboard de Competidores", "Dashboard de Comportamiento", "Dashboard SEO", "Control completo de API"]'
+      >
+      </subscription-card>
+    </div>
+
+    <script src="subscription.js"></script>
+
+    <script>
+      document.addEventListener("subscription-selected", function (event) {
+        alert(
+          "¡Suscripción seleccionada!\nPlan: " +
+            event.detail.title +
+            "\nPrecio: $" +
+            event.detail.price
+        );
+        console.log("Evento capturado:", event.detail);
+      });
+    </script>
+  </body>
+</html>
