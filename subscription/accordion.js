@@ -3,45 +3,39 @@ class AccordionItem extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
 
+    const styleLink = document.createElement("link");
+    styleLink.setAttribute("rel", "stylesheet");
+    styleLink.setAttribute("href", "accordion.css");
+    this.shadowRoot.appendChild(styleLink);
+    
     const template = document.createElement('template');
     template.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          border-bottom: 1px solid #ccc;
-        }
-        .header {
-          background: #f1f1f1;
-          padding: 10px;
-          cursor: pointer;
-          user-select: none;
-        }
-        .content {
-          display: none;
-          padding: 10px;
-        }
-        :host([open]) .content {
-          display: block;
-        }
-      </style>
-      <div class="header"></div>
+      <div class="header">
+        <span class="arrow">▶</span>
+        <span class="title"></span>
+      </div>
       <div class="content"><slot></slot></div>
     `;
+
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     this._header = this.shadowRoot.querySelector('.header');
-    this._header.textContent = this.getAttribute('title') || 'Untitled';
+    this._titleEl = this.shadowRoot.querySelector('.title');
+    this._arrow = this.shadowRoot.querySelector('.arrow');
+
+    this._titleEl.textContent = this.getAttribute('title') || 'Untitled';
+
     this._header.addEventListener('click', () => this.toggle());
   }
 
   toggle() {
-    const parent = this.closest('accordion');
+    const parent = this.closest('accordion-container');
     if (parent && parent.hasAttribute('single')) {
       parent.closeAll();
     }
     this.toggleAttribute('open');
   }
-
+  
   close() {
     this.removeAttribute('open');
   }
@@ -62,4 +56,4 @@ class Accordion extends HTMLElement {
 }
 
 customElements.define('accordion-item', AccordionItem);
-customElements.define('accordion', Accordion);
+customElements.define('accordion-container', Accordion);
