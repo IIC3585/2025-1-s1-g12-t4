@@ -1,0 +1,17 @@
+{
+  "name": "subscription-lit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "lit": "^3.3.0",
+    "vite": "^6.3.5"
+  }
+}
