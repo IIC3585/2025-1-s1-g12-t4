@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log*
+.DS_Store  # Archivos de macOS
+dist/
+
+# Ignorar archivos de configuración de editores de código
+.vscode/    # Configuración de VS Code
+.idea/      # Configuración de IntelliJ/WebStorm
