@@ -2,6 +2,8 @@
 
 ---
 
+Demo de web-components (estándar): [https://t4-web-components.web.app/](https://t4-web-components.web.app/)
+
 ## Requisitos Previos
 
 Para ejecutar los proyectos basados en Node.js (como `subscription-lit` y potencialmente otros que usen módulos de JS), necesitas tener [Node.js](https://nodejs.org/) y [npm](https://www.npmjs.com/) instalados en tu sistema.
