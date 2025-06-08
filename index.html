@@ -1,23 +1,50 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Accordion Web Component</title>
-</head>
-<body>
-  <my-accordion>
-    <accordion-item title="Section 1">
-      <p>This is the content of section 1.</p>
-    </accordion-item>
-    <accordion-item title="Section 2">
-      <p>This is the content of section 2.</p>
-    </accordion-item>
-    <accordion-item title="Section 3">
-      <p>This is the content of section 3.</p>
-    </accordion-item>
-  </my-accordion>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Components</title>
+  </head>
+  <body>
+    <h1>Web Components Examples</h1>
+    <div class="container">
+      <h2>Accordion Component</h2>
+      <p>
+        This example demonstrates a simple accordion component using web
+        components.
+      </p>
+      <p>Click on the section titles to expand or collapse the content.</p>
+      <accordion>
+        <accordion-item title="Section 1">
+          <p>This is the content of section 1.</p>
+        </accordion-item>
+        <accordion-item title="Section 2">
+          <p>This is the content of section 2.</p>
+        </accordion-item>
+        <accordion-item title="Section 3">
+          <p>This is the content of section 3.</p>
+        </accordion-item>
+      </accordion>
 
-  <script type="module" src="./components/accordion.js"></script>
-</body>
+      <accordion single>
+        <accordion-item title="FAQ 1">
+          <p>Answer 1.</p>
+        </accordion-item>
+        <accordion-item title="FAQ 2">
+          <p>Answer 2.</p>
+        </accordion-item>
+      </accordion>
+
+      <accordion>
+        <accordion-item title="Settings A">
+          <p>Setting details A.</p>
+        </accordion-item>
+        <accordion-item title="Settings B">
+          <p>Setting details B.</p>
+        </accordion-item>
+      </accordion>
+    </div>
+    <script type="module" src="./components/accordion.js"></script>
+    <link rel="stylesheet" href="./index.css">
+  </body>
 </html>

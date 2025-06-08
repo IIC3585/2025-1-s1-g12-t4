@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.header {
+  background: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.content {
+  display: none;
+  padding: 10px;
+}
+:host([open]) .content {
+  display: block;
+}

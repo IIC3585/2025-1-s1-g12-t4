@@ -35,7 +35,7 @@ class AccordionItem extends HTMLElement {
   }
 
   toggle() {
-    const parent = this.closest('my-accordion');
+    const parent = this.closest('accordion');
     if (parent && parent.hasAttribute('single')) {
       parent.closeAll();
     }
@@ -51,7 +51,7 @@ class AccordionItem extends HTMLElement {
   }
 }
 
-class MyAccordion extends HTMLElement {
+class Accordion extends HTMLElement {
   constructor() {
     super();
   }
@@ -62,4 +62,4 @@ class MyAccordion extends HTMLElement {
 }
 
 customElements.define('accordion-item', AccordionItem);
-customElements.define('my-accordion', MyAccordion);
+customElements.define('accordion', Accordion);
