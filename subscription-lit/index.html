@@ -22,6 +22,15 @@
         flex-wrap: wrap;
         margin-top: 30px;
       }
+      h2 {
+        color: #4338ca;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      accordion-container-lit {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+      }
     </style>
   </head>
   <body>
@@ -56,8 +65,71 @@
       </subscription-card-lit>
     </div>
 
+    <h1 style="margin-top: 80px;">Accordion con Lit Element</h1>
+    
+    <h2>Acordeón Básico</h2>
+    <accordion-container-lit>
+      <accordion-item-lit title="¿Qué incluye el plan básico?">
+        <p>El plan básico incluye hasta 500 visitas mensuales, reportes básicos y soporte por email.</p>
+        <ul>
+          <li>Visitas diarias ilimitadas</li>
+          <li>Reportes mensuales</li>
+          <li>Integración con Google Analytics</li>
+        </ul>
+      </accordion-item-lit>
+      
+      <accordion-item-lit title="¿Puedo cambiar de plan en cualquier momento?">
+        <p>Sí, puedes actualizar o degradar tu plan en cualquier momento desde tu panel de control.</p>
+        <p>Los cambios se aplicarán en tu próximo ciclo de facturación.</p>
+      </accordion-item-lit>
+      
+      <accordion-item-lit title="¿Ofrecen soporte técnico?">
+        <p>Ofrecemos diferentes niveles de soporte según tu plan:</p>
+        <ul>
+          <li><strong>Básico:</strong> Soporte por email</li>
+          <li><strong>Freelance:</strong> Soporte prioritario + chat</li>
+          <li><strong>Empresarial:</strong> Soporte 24/7 + llamadas</li>
+        </ul>
+      </accordion-item-lit>
+    </accordion-container-lit>
+
+    <h2>Acordeón Modo Único</h2>
+    <accordion-container-lit single>
+      <accordion-item-lit title="Características del Plan Freelance">
+        <p>El plan Freelance está diseñado para profesionales independientes que necesitan más funcionalidades.</p>
+        <ul>
+          <li>Hasta 10,000 visitas mensuales</li>
+          <li>Integración con redes sociales</li>
+          <li>Dashboard avanzado</li>
+          <li>Reportes personalizados</li>
+        </ul>
+      </accordion-item-lit>
+      
+      <accordion-item-lit title="Características del Plan Empresarial">
+        <p>Nuestro plan más completo para empresas que requieren análisis profundo.</p>
+        <ul>
+          <li>Hasta 100,000 visitas mensuales</li>
+          <li>Dashboard de competidores</li>
+          <li>Análisis de comportamiento</li>
+          <li>API completa</li>
+          <li>Soporte dedicado</li>
+        </ul>
+      </accordion-item-lit>
+      
+      <accordion-item-lit title="Preguntas sobre Facturación">
+        <p>Información importante sobre facturación y pagos:</p>
+        <ul>
+          <li>Facturación mensual o anual</li>
+          <li>Descuentos por pago anual</li>
+          <li>Aceptamos todas las tarjetas principales</li>
+          <li>Facturación automática</li>
+        </ul>
+      </accordion-item-lit>
+    </accordion-container-lit>
+
     <script type="module">
       import "./subscription-lit.js";
+      import "./accordion-lit.js";
     </script>
 
     <script>
